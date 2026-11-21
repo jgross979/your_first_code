@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Cosmic Zoom</title>
+    <meta name="description" content="Spin the Earth, drop down to a street map, or zoom out to the planets, their moons and the nearest stars." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='22' fill='%233b7bdc'/><path d='M18 26c6-2 9 3 14 1s6-8 12-5c2 4-3 7-1 10s6 2 6 7c-4 6-10 9-17 9-3-4 1-8-3-11s-9 0-11-4c-2-3 0-6 0-7z' fill='%2347a85a'/><ellipse cx='32' cy='32' rx='30' ry='8' fill='none' stroke='%23c9b98a' stroke-width='3' transform='rotate(-20 32 32)'/></svg>" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage"></div>
+
+      <div id="surface-map">
+        <div class="map-canvas"></div>
+        <div class="map-bar">
+          <button class="map-exit">↑ Back to space</button>
+          <span class="map-coords"></span>
+        </div>
+      </div>
+
+      <header id="topbar">
+        <div class="brand">Cosmic Zoom</div>
+        <nav id="breadcrumb" aria-label="Where you are"></nav>
+      </header>
+
+      <button id="nav-toggle" class="fab" aria-label="Show list of places">☰ Explore</button>
+      <aside id="navigator">
+        <div class="nav-head">Go to…</div>
+        <div id="nav-list"></div>
+      </aside>
+
+      <aside id="info-panel" aria-live="polite"></aside>
+      <button id="info-toggle" class="fab" aria-label="Show info">ⓘ</button>
+
+      <footer id="timebar">
+        <div id="readout"></div>
+        <div class="time-row">
+          <span id="sim-date"></span>
+          <div id="rates"></div>
+          <button id="now-btn" title="Jump back to the current date">Now</button>
+        </div>
+        <div id="hint">Drag to spin · Scroll to zoom (point at a planet to zoom into it) · Click a name to fly there · Esc to zoom out</div>
+      </footer>
+
+      <div id="loading"><div class="spinner"></div><p>Loading the universe…</p></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

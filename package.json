@@ -1,0 +1,20 @@
+{
+  "name": "cosmic-zoom",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Zoom from a street map on Earth out to the solar system and the nearest stars.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "simplex-noise": "^4.0.3",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
