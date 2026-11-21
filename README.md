@@ -15,7 +15,7 @@ npm run build     # static site in dist/
 ```
 
 The included GitHub Actions workflow (`.github/workflows/deploy.yml`) publishes `dist/` to
-GitHub Pages on every push to `main` (enable Pages → "GitHub Actions" in the repo settings).
+GitHub Pages on every push to `master` (or `main`) (enable Pages → "GitHub Actions" in the repo settings).
 
 ## Controls
 
